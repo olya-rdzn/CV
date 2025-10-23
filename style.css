@@ -256,23 +256,27 @@ strong {
   color: var(--name-color);
 }
 
+/* ✅ LARGE, RESPONSIVE PHOTO */
 .profile-photo {
   float: right;
   margin: 0 0 1.4rem 1.8rem;
-  max-width: 280px;
-  width: 100%;
+  max-width: 320px;
+  width: auto;
+  height: auto;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 .profile-photo img {
-  width: 100%;
-  height: auto;
   display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border-radius: var(--radius);
 }
 
-/* Style only the CV link */
+/* Only the CV link is styled */
 .cv-link {
   color: var(--accent);
   text-decoration: underline;
@@ -348,22 +352,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 850px) {
-  .nav-links { gap: 1.2rem; }
-  nav { padding: 1rem 1.2rem; }
-  .profile-photo { max-width: 220px; margin: 0 0 1.2rem 1.4rem; }
-}
-
-@media (max-width: 700px) {
-  .nav-links { gap: 0.9rem; font-size: 0.95rem; }
-  #lang-toggle { font-size: 1rem; }
-  main { margin: 2rem auto; padding: 0 1.2rem; }
-  h1 { font-size: 2.1rem; }
-  .profile-photo { max-width: 180px; margin: 0 0 1rem 1.2rem; }
-}
-
-@media (max-width: 500px) {
-  .profile-photo { float: none; max-width: 100%; margin: 0 auto 1.4rem; }
-  .profile-photo img { border-radius: var(--radius); }
+/* Mobile: center photo */
+@media (max-width: 600px) {
+  .profile-photo {
+    float: none;
+    margin: 0 auto 1.4rem;
+    max-width: 280px;
+  }
 }
