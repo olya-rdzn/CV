@@ -8,7 +8,7 @@ const translations = {
     translations: "Translations",
     academics: "Academics",
     contact: "Contact",
-    about_text: "I am a linguist and educator specializing in multilingual lexicography, translation, and language teaching. My work bridges linguistic accuracy with practical application in educational and digital contexts. I have collaborated with institutions such as Lankaran State University and Penza State University.",
+    about_text: "I am a linguist and educator specializing in multilingual lexicography, translation, and language teaching. My work bridges linguistic accuracy with practical application in educational and digital contexts. I have collaborated with institutions such as <strong>Lankaran State University</strong> and <strong>Penza State University</strong>.",
     teaching_title: "Teaching",
     teaching_text: "I offer language instruction in English, Russian, and minority languages such as Moksha and Talysh. My approach emphasizes communicative competence, cultural context, and learner autonomy. I design custom curricula for academic and professional purposes.",
     translations_title: "Translations",
@@ -19,7 +19,8 @@ const translations = {
     email_label: "Your email",
     topic_label: "Topic",
     message_label: "Message",
-    send_button: "Send"
+    send_button: "Send",
+    cv_line: 'You can <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">see my CV here</a> (in a new tab).'
   },
   ru: {
     about: "Обо мне",
@@ -28,7 +29,7 @@ const translations = {
     translations: "Переводы",
     academics: "Академическая деятельность",
     contact: "Контакты",
-    about_text: "Я лингвист и преподаватель, специализируюсь на многоязычной лексикографии, переводе и обучении языкам. Моя работа соединяет лингвистическую точность с практическим применением в образовательных и цифровых контекстах. Я сотрудничала с такими учреждениями, как Ленкоранский государственный университет и Пензенский государственный университет.",
+    about_text: "Я лингвист и преподаватель, специализируюсь на многоязычной лексикографии, переводе и обучении языкам. Моя работа соединяет лингвистическую точность с практическим применением в образовательных и цифровых контекстах. Я сотрудничала с такими учреждениями, как <strong>Ленкоранский государственный университет</strong> и <strong>Пензенский государственный университет</strong>.",
     teaching_title: "Преподавание",
     teaching_text: "Я предлагаю обучение языкам: английский, русский, а также малые языки — мокшанский и талышский. Мой подход делает акцент на коммуникативной компетенции, культурном контексте и самостоятельности учащихся. Я разрабатываю индивидуальные программы для академических и профессиональных целей.",
     translations_title: "Переводы",
@@ -39,7 +40,8 @@ const translations = {
     email_label: "Ваш email",
     topic_label: "Тема",
     message_label: "Сообщение",
-    send_button: "Отправить"
+    send_button: "Отправить",
+    cv_line: 'Вы можете <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">см. моё резюме здесь</a> (в новой вкладке).'
   }
 };
 
@@ -63,6 +65,7 @@ function showSection(sectionId) {
   if (activeLink) activeLink.classList.add('active');
 }
 
+// Nav handling
 document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -79,6 +82,7 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
   });
 });
 
+// Language dropdown
 const langToggle = document.getElementById('lang-toggle');
 const langDropdown = document.getElementById('lang-dropdown');
 
@@ -105,8 +109,9 @@ document.querySelectorAll('.lang-option').forEach(btn => {
 function updateContent() {
   document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
-    if (translations[currentLang][key]) {
-      el.textContent = translations[currentLang][key];
+    if (translations[currentLang][key] !== undefined) {
+      // Use innerHTML to support embedded HTML (like <strong> and <a>)
+      el.innerHTML = translations[currentLang][key];
     }
   });
 
@@ -115,6 +120,7 @@ function updateContent() {
     : 'Ольга Родзина — Резюме';
 }
 
+// Initial load
 window.addEventListener('load', () => {
   const hash = window.location.hash.substring(1);
   showSection(hash || 'about');
