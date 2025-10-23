@@ -20,7 +20,7 @@ const translations = {
     topic_label: "Topic",
     message_label: "Message",
     send_button: "Send",
-    cv_line: 'You can <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">see my CV here</a> (in a new tab).'
+    cv_line: 'You can see my <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">CV here</a> (in a new tab).'
   },
   ru: {
     about: "Обо мне",
@@ -41,7 +41,7 @@ const translations = {
     topic_label: "Тема",
     message_label: "Сообщение",
     send_button: "Отправить",
-    cv_line: 'Вы можете <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">см. моё резюме здесь</a> (в новой вкладке).'
+    cv_line: 'Вы можете см. моё <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">резюме здесь</a> (в новой вкладке).'
   }
 };
 
@@ -65,7 +65,6 @@ function showSection(sectionId) {
   if (activeLink) activeLink.classList.add('active');
 }
 
-// Nav handling
 document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -82,7 +81,6 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
   });
 });
 
-// Language dropdown
 const langToggle = document.getElementById('lang-toggle');
 const langDropdown = document.getElementById('lang-dropdown');
 
@@ -110,7 +108,6 @@ function updateContent() {
   document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
     if (translations[currentLang][key] !== undefined) {
-      // Use innerHTML to support embedded HTML (like <strong> and <a>)
       el.innerHTML = translations[currentLang][key];
     }
   });
@@ -120,7 +117,6 @@ function updateContent() {
     : 'Ольга Родзина — Резюме';
 }
 
-// Initial load
 window.addEventListener('load', () => {
   const hash = window.location.hash.substring(1);
   showSection(hash || 'about');
