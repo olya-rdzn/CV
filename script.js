@@ -117,12 +117,15 @@ function updateContent() {
     : 'Ольга Родзина — Резюме';
 }
 
+// ✅ CRITICAL: Render content on initial load
 window.addEventListener('load', () => {
   const hash = window.location.hash.substring(1);
   showSection(hash || 'about');
+  updateContent(); // ← This ensures the CV line appears immediately
 });
 
 window.addEventListener('popstate', () => {
   const hash = window.location.hash.substring(1);
   showSection(hash || 'about');
+  updateContent();
 });
