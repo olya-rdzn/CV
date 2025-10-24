@@ -2,6 +2,7 @@ let currentLang = 'en';
 
 const translations = {
   en: {
+    name: "Olga Rodzina",
     about: "About",
     services: "Services",
     teaching: "Teaching",
@@ -23,6 +24,7 @@ const translations = {
     cv_line: 'You can see my <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">CV here</a> (in a new tab).'
   },
   ru: {
+    name: "Оля Родзина",
     about: "Обо мне",
     services: "Услуги",
     teaching: "Преподавание",
