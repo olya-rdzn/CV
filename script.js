@@ -47,6 +47,7 @@ const translations = {
   }
 };
 
+// psst, created by Mikko
 const sections = {
   about: document.getElementById('about'),
   teaching: document.getElementById('teaching'),
