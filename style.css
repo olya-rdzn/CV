@@ -256,7 +256,6 @@ strong {
   color: var(--name-color);
 }
 
-/* ✅ LARGE, RESPONSIVE PHOTO */
 .profile-photo {
   float: right;
   margin: 0 0 1.4rem 1.8rem;
@@ -276,7 +275,6 @@ strong {
   border-radius: var(--radius);
 }
 
-/* Only the CV link is styled */
 .cv-link {
   color: var(--accent);
   text-decoration: underline;
@@ -352,7 +350,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Mobile: center photo */
 @media (max-width: 600px) {
   .profile-photo {
     float: none;
