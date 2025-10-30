@@ -57,10 +57,13 @@ const sections = {
 };
 
 function showSection(sectionId) {
-  Object.values(sections).forEach(section => section.classList.add('hidden'));
-  if (sections[sectionId]) {
-    sections[sectionId].classList.remove('hidden');
+  if (!sections[sectionId]) {
+    sectionId = 'about';
   }
+
+  Object.values(sections).forEach(section => section.classList.add('hidden'));
+  sections[sectionId].classList.remove('hidden');
+
   history.pushState(null, '', `#${sectionId}`);
 
   document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
@@ -102,6 +105,7 @@ document.querySelectorAll('.lang-option').forEach(btn => {
   btn.addEventListener('click', () => {
     const newLang = btn.getAttribute('data-lang');
     currentLang = newLang;
+    localStorage.setItem('preferredLang', newLang);
     updateContent();
     langDropdown.classList.add('hidden');
   });
@@ -121,6 +125,16 @@ function updateContent() {
 }
 
 window.addEventListener('load', () => {
+  const savedLang = localStorage.getItem('preferredLang');
+  if (savedLang && translations[savedLang]) {
+    currentLang = savedLang;
+  } else {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+      currentLang = browserLang;
+    }
+  }
+
   const hash = window.location.hash.substring(1);
   showSection(hash || 'about');
   updateContent();
