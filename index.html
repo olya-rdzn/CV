@@ -7,7 +7,6 @@
   <title>Olga Rodzina</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
   <script src="https://unpkg.com/feather-icons"></script>
 
   <link rel="stylesheet" href="style.css" />
@@ -15,79 +14,81 @@
 </head>
 <body>
 
-<header class="hero">
-  <nav class="container nav">
-    <a href="#" class="logo" data-key="name">Olga Rodzina</a>
+<div class="page-wrapper">
 
-    <ul class="nav-list">
-      <li><a href="#about"    class="nav-link" data-key="about">About</a></li>
-      <li><a href="#teaching" class="nav-link" data-key="teaching">Teaching</a></li>
-      <li><a href="#translations" class="nav-link" data-key="translations">Translations</a></li>
-      <li><a href="#academics" class="nav-link" data-key="academics">Academics</a></li>
-      <li><a href="#contact"  class="nav-link" data-key="contact">Contact</a></li>
-    </ul>
+  <header class="hero">
+    <nav class="container nav">
+      <a href="#" class="logo" data-key="name">Olga Rodzina</a>
 
-    <div class="lang-switch">
-      <button id="lang-toggle" aria-label="Language"><i data-feather="globe"></i></button>
-      <div id="lang-menu" class="lang-menu hidden">
-        <button class="lang-opt" data-lang="en">English</button>
-        <button class="lang-opt" data-lang="ru">Русский</button>
+      <ul class="nav-list">
+        <li><a href="#about"    class="nav-link" data-key="about">About</a></li>
+        <li><a href="#teaching" class="nav-link" data-key="teaching">Teaching</a></li>
+        <li><a href="#translations" class="nav-link" data-key="translations">Translations</a></li>
+        <li><a href="#academics" class="nav-link" data-key="academics">Academics</a></li>
+        <li><a href="#contact"  class="nav-link" data-key="contact">Contact</a></li>
+      </ul>
+
+      <div class="lang-switch">
+        <button id="lang-toggle" aria-label="Language"><i data-feather="globe"></i></button>
+        <div id="lang-menu" class="lang-menu hidden">
+          <button class="lang-opt" data-lang="en">English</button>
+          <button class="lang-opt" data-lang="ru">Русский</button>
+        </div>
       </div>
+    </nav>
+
+    <div class="hero-content container">
+      <p data-key="hero_sub">Language Teacher • Lexicographer • Linguist</p>
     </div>
-  </nav>
+  </header>
 
-  <div class="hero-content container">
-    <p data-key="hero_sub">Language Teacher • Lexicographer • Linguist</p>
-  </div>
-</header>
-
-<main class="container">
-
-  <section id="about" class="section">
-    <h2 data-key="about_title">About Me</h2>
-    <div class="grid-2">
-      <div>
-        <p data-key="about_text"></p>
-        <p class="cv-line"><a href="CV_file.pdf" target="_blank" class="cv-link" data-key="cv_line">Download CV (PDF)</a></p>
+  <main class="container">
+    <section id="about" class="section">
+      <h2 data-key="about_title">About Me</h2>
+      <div class="grid-2">
+        <div>
+          <p data-key="about_text"></p>
+          <p class="cv-line"><a href="CV_file.pdf" target="_blank" class="cv-link" data-key="cv_line">Download CV (PDF)</a></p>
+        </div>
+        <div class="photo-card">
+          <img src="profile_photo.jpeg" alt="Olga Rodzina">
+        </div>
       </div>
-      <div class="photo-card">
-        <img src="profile_photo.jpeg" alt="Olga Rodzina">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="teaching" class="section hidden">
-    <h2 data-key="teaching_title">Teaching</h2>
-    <div data-key="teaching_text" class="rich-text"></div>
-  </section>
+    <section id="teaching" class="section hidden">
+      <h2 data-key="teaching_title">Teaching</h2>
+      <div data-key="teaching_text" class="rich-text"></div>
+    </section>
 
-  <section id="translations" class="section hidden">
-    <h2 data-key="translations_title">Translations & Terminology</h2>
-    <div data-key="translations_text" class="rich-text"></div>
-  </section>
+    <section id="translations" class="section hidden">
+      <h2 data-key="translations_title">Translations & Terminology</h2>
+      <div data-key="translations_text" class="rich-text"></div>
+    </section>
 
-  <section id="academics" class="section hidden">
-    <h2 data-key="academics_title">Academics & Research</h2>
-    <div data-key="academics_text" class="rich-text"></div>
-  </section>
+    <section id="academics" class="section hidden">
+      <h2 data-key="academics_title">Academics & Research</h2>
+      <div data-key="academics_text" class="rich-text"></div>
+    </section>
 
-  <section id="contact" class="section hidden">
-    <h2 data-key="contact_title">Get in Touch</h2>
-    <form id="contact-form" action="https://formspree.io/f/olya.rodzina@gmail.com" method="POST" class="contact-form">
-      <label data-key="email_label">Your email</label>
-      <input type="email" name="email" required />
+    <section id="contact" class="section hidden">
+      <h2 data-key="contact_title">Get in Touch</h2>
+      <form id="contact-form" action="https://formspree.io/f/olya.rodzina@gmail.com" method="POST" class="contact-form">
+        <label data-key="email_label">Your email</label>
+        <input type="email" name="email" required />
 
-      <label data-key="topic_label">Topic</label>
-      <input type="text" name="topic" required />
+        <label data-key="topic_label">Topic</label>
+        <input type="text" name="topic" required />
 
-      <label data-key="message_label">Message</label>
-      <textarea name="message" rows="5" required></textarea>
+        <label data-key="message_label">Message</label>
+        <textarea name="message" rows="5" required></textarea>
 
-      <button type="submit" class="btn-primary" data-key="send_button">Send Message</button>
-    </form>
-  </section>
+        <button type="submit" class="btn-primary" data-key="send_button">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-</main>
+</div>
 
 <footer class="footer">
   <div class="container footer-grid">
