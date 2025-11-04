@@ -3,51 +3,117 @@ let currentLang = 'en';
 const translations = {
   en: {
     name: "Olga Rodzina",
-    about: "About",
-    services: "Services",
-    teaching: "Teaching",
-    translations: "Translations",
-    academics: "Academics",
-    contact: "Contact",
-    about_text: "I am a linguist and educator specializing in multilingual lexicography, translation, and language teaching. My work bridges linguistic accuracy with practical application in educational and digital contexts. I have collaborated with institutions such as <strong>Lankaran State University</strong> and <strong>Penza State University</strong>.",
+    hero_sub: "Language Teacher • Lexicographer • Linguist",
+
+    about: "About", teaching: "Teaching", translations: "Translations",
+    academics: "Academics", contact: "Contact",
+
+    about_title: "About Me",
+    about_text: `
+      A dedicated linguist, researcher and educator. I hold two master’s degrees: <strong>European Master in Lexicography (EMLex)</strong> and <strong>MA in Languages, Culture and Media</strong>. 
+      Currently a lecturer at <strong>Penza State University</strong>, I teach English grammar, phonetics, and Russian as a foreign language to students from 14 different nationalities. 
+      My research includes a traineeship at the <strong>Institute for the Dutch Language (Leiden)</strong> and publications in phraseology, semantics, and intercultural studies.
+    `,
+
+    cv_line: "Download CV (PDF)",
+
     teaching_title: "Teaching",
-    teaching_text: "I offer language instruction in English, Russian, and minority languages such as Moksha and Talysh. My approach emphasizes communicative competence, cultural context, and learner autonomy. I design custom curricula for academic and professional purposes.",
-    translations_title: "Translations",
-    translations_text: "I provide high-quality translation services between English, Russian, and several lesser-resourced languages. My translations prioritize semantic fidelity, stylistic appropriateness, and terminological consistency, especially in academic and technical domains.",
-    academics_title: "Academics",
-    academics_text: "My academic background includes advanced study in computational linguistics, lexicography, and language pedagogy. I have contributed to dictionary projects for Abkhaz, Moksha, Talysh, and Mongolian, with a focus on lemma tagging and grammatical annotation.",
-    contact_title: "Contact",
-    email_label: "Your email",
-    topic_label: "Topic",
-    message_label: "Message",
-    send_button: "Send",
-    cv_line: 'You can see my <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">CV here</a> (in a new tab).'
+    teaching_text: `
+      <strong>Lecturer – Russian as a Foreign Language</strong> (Nov 2023 – Present)<br>
+      • Provide Russian lessons to international students for academic success in Russian-medium programs.<br>
+      • Organize cultural events (films, literature, excursions) to build communication and intercultural competence.<br><br>
+
+      <strong>Lecturer – English Language</strong> (Nov 2023 – Present)<br>
+      • Conduct seminars on Practical English Grammar and Phonetics for first-year students.<br><br>
+
+      <strong>Previous roles:</strong> English Teacher at Welcome Language School (2019–2021) and English House (2018–2021) – lesson planning, curriculum design, extracurricular activities.
+    `,
+
+    translations_title: "Translations & Terminology",
+    translations_text: `
+      I offer translation and lexicographic services between <strong>English, Russian</strong>, and other languages. 
+      My expertise includes bilingual phraseological dictionaries, semantic analysis, and terminological consistency. 
+      Past projects: transliteration tables for the Digital Pallas (18th-century Russian dictionary) and etymon research for English loanwords in Dutch (GLAD project).
+    `,
+
+    academics_title: "Academics & Research",
+    academics_text: `
+      <strong>EMLex – European Master in Lexicography</strong><br>
+      Károli Gáspár University & Universidade do Minho (2021–2023)<br>
+      • Thesis: <em>Comparative Analysis of English and Russian Phraseology and its Representation in Bilingual Dictionaries</em> (90 units, 4 dictionaries analyzed)<br><br>
+
+      <strong>MA – Languages, Culture and Media</strong><br>
+      Penza State University (2019–2021)<br>
+      • Thesis: <em>The Image of America in the Novels of Theodor Dreiser</em><br><br>
+
+      <strong>BA – English Studies</strong><br>
+      Penza State University (2015–2019)<br>
+      • Thesis: <em>Neologisms and their Study in English Lessons at Secondary Schools</em><br><br>
+
+      <strong>Skills:</strong> Lexicography, Computational Linguistics, NLP, Phraseology, Semantics, Cultural Awareness, Data Analysis, Terminology
+    `,
+
+    contact_title: "Get in Touch",
+    email_label: "Your email", topic_label: "Topic", message_label: "Message", send_button: "Send Message"
   },
+
   ru: {
-    name: "Оля Родзина",
-    about: "Обо мне",
-    services: "Услуги",
-    teaching: "Преподавание",
-    translations: "Переводы",
-    academics: "Академическая деятельность",
-    contact: "Контакты",
-    about_text: "Я лингвист и преподаватель, специализируюсь на многоязычной лексикографии, переводе и обучении языкам. Моя работа соединяет лингвистическую точность с практическим применением в образовательных и цифровых контекстах. Я сотрудничала с такими учреждениями, как <strong>Ленкоранский государственный университет</strong> и <strong>Пензенский государственный университет</strong>.",
+    name: "Ольга Родзина",
+    hero_sub: "Преподаватель языков • Лексикограф • Лингвист",
+
+    about: "Обо мне", teaching: "Преподавание", translations: "Переводы",
+    academics: "Академия", contact: "Контакты",
+
+    about_title: "Обо мне",
+    about_text: `
+      Преданный лингвист, исследователь и педагог. Имею две магистерские степени: <strong>Европейский магистр лексикографии (EMLex)</strong> и <strong>магистр по языкам, культуре и медиа</strong>. 
+      В настоящее время — преподаватель <strong>Пензенского государственного университета</strong>, веду английскую грамматику, фонетику и русский как иностранный для студентов из 14 стран. 
+      Исследовательский опыт включает стажировку в <strong>Институте нидерландского языка (Лейден)</strong> и публикации по фразеологии, семантике и межкультурным исследованиям.
+    `,
+
+    cv_line: "Скачать резюме (PDF)",
+
     teaching_title: "Преподавание",
-    teaching_text: "Я предлагаю обучение языкам: английский, русский, а также малые языки — мокшанский и талышский. Мой подход делает акцент на коммуникативной компетенции, культурном контексте и самостоятельности учащихся. Я разрабатываю индивидуальные программы для академических и профессиональных целей.",
-    translations_title: "Переводы",
-    translations_text: "Я предоставляю качественные переводческие услуги между английским, русским и несколькими малоресурсными языками. Мои переводы ориентированы на смысловую точность, стилистическую уместность и терминологическую согласованность, особенно в академической и технической сферах.",
+    teaching_text: `
+      <strong>Преподаватель РКИ</strong> (ноябрь 2023 – наст. время)<br>
+      • Веду уроки русского для иностранных студентов, обеспечивая успех в русскоязычных программах.<br>
+      • Организую культурные мероприятия (кино, литература, экскурсии) для развития коммуникативных и межкультурных навыков.<br><br>
+
+      <strong>Преподаватель английского языка</strong> (ноябрь 2023 – наст. время)<br>
+      • Провожу семинары по практической грамматике и фонетике английского для студентов 1 курса.<br><br>
+
+      <strong>Ранее:</strong> учитель английского в Welcome Language School (2019–2021) и English House (2018–2021) — планирование уроков, разработка программ, внеклассные мероприятия.
+    `,
+
+    translations_title: "Переводы и терминология",
+    translations_text: `
+      Предоставляю услуги перевода и лексикографии между <strong>английским, русским</strong> и другими языками. 
+      Экспертиза включает двуязычные фразеологические словари, семантический анализ и терминологическую согласованность. 
+      Проекты: таблицы транслитерации для Digital Pallas (XVIII век) и исследование этимонов английских заимствований в нидерландском (GLAD).
+    `,
+
     academics_title: "Академическая деятельность",
-    academics_text: "Моё академическое образование включает углублённое изучение компьютерной лингвистики, лексикографии и методики преподавания языков. Я участвовала в словарных проектах для абхазского, мокшанского, талышского и монгольского языков с акцентом на лемматизацию и грамматическую разметку.",
-    contact_title: "Контакты",
-    email_label: "Ваш email",
-    topic_label: "Тема",
-    message_label: "Сообщение",
-    send_button: "Отправить",
-    cv_line: 'Вы можете см. моё <a href="CV_file.pdf" target="_blank" rel="noopener" class="cv-link">резюме здесь</a> (в новой вкладке).'
+    academics_text: `
+      <strong>EMLex – Европейский магистр лексикографии</strong><br>
+      Университет Каройи Гашпара и Университет Минью (2021–2023)<br>
+      • Дипломная: <em>Сравнительный анализ английской и русской фразеологии и её отражения в двуязычных словарях</em> (90 единиц, 4 словаря)<br><br>
+
+      <strong>Магистр – Языки, культура и медиа</strong><br>
+      Пензенский государственный университет (2019–2021)<br>
+      • Дипломная: <em>Образ Америки в романах Теодора Драйзера</em><br><br>
+
+      <strong>Бакалавр – Английская филология</strong><br>
+      Пензенский государственный университет (2015–2019)<br>
+      • Дипломная: <em>Неологизмы и их изучение на уроках английского в средней школе</em><br><br>
+
+      <strong>Навыки:</strong> Лексикография, компьютерная лингвистика, NLP, фразеология, семантика, культурная осведомлённость, анализ данных, терминология
+    `,
+
+    contact_title: "Связаться",
+    email_label: "Ваш email", topic_label: "Тема", message_label: "Сообщение", send_button: "Отправить"
   }
 };
 
-// psst, created by Mikko
 const sections = {
   about: document.getElementById('about'),
   teaching: document.getElementById('teaching'),
@@ -56,92 +122,56 @@ const sections = {
   contact: document.getElementById('contact')
 };
 
-function showSection(sectionId) {
-  if (!sections[sectionId]) {
-    sectionId = 'about';
-  }
-
-  Object.values(sections).forEach(section => section.classList.add('hidden'));
-  sections[sectionId].classList.remove('hidden');
-
-  history.pushState(null, '', `#${sectionId}`);
-
-  document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-  const activeLink = document.querySelector(`[href="#${sectionId}"]`);
-  if (activeLink) activeLink.classList.add('active');
+function showSection(id) {
+  if (!sections[id]) id = 'about';
+  Object.values(sections).forEach(s => s.classList.add('hidden'));
+  sections[id].classList.remove('hidden');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const link = document.querySelector(`[href="#${id}"]`);
+  if (link) link.classList.add('active');
+  history.pushState(null, '', `#${id}`);
 }
 
-document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = e.target.getAttribute('href').substring(1);
-    showSection(target);
-  });
-});
-
-document.querySelectorAll('.dropdown-item').forEach(item => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = e.target.getAttribute('href').substring(1);
-    showSection(target);
+document.querySelectorAll('.nav-link').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault(); // psst created by Mikko
+    showSection(a.getAttribute('href').slice(1));
   });
 });
 
 const langToggle = document.getElementById('lang-toggle');
-const langDropdown = document.getElementById('lang-dropdown');
+const langMenu = document.getElementById('lang-menu');
+langToggle.addEventListener('click', e => { e.stopPropagation(); langMenu.classList.toggle('hidden'); });
+document.addEventListener('click', () => langMenu.classList.add('hidden'));
 
-langToggle.addEventListener('click', (e) => {
-  e.stopPropagation();
-  langDropdown.classList.toggle('hidden');
-});
-
-document.addEventListener('click', (e) => {
-  if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
-    langDropdown.classList.add('hidden');
-  }
-});
-
-document.querySelectorAll('.lang-option').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const newLang = btn.getAttribute('data-lang');
-    currentLang = newLang;
-    localStorage.setItem('preferredLang', newLang);
+document.querySelectorAll('.lang-opt').forEach(b => {
+  b.addEventListener('click', () => {
+    currentLang = b.dataset.lang;
+    localStorage.setItem('preferredLang', currentLang);
     updateContent();
-    langDropdown.classList.add('hidden');
+    langMenu.classList.add('hidden');
   });
 });
 
 function updateContent() {
   document.querySelectorAll('[data-key]').forEach(el => {
-    const key = el.getAttribute('data-key');
+    const key = el.dataset.key;
     if (translations[currentLang][key] !== undefined) {
       el.innerHTML = translations[currentLang][key];
     }
   });
-
-  document.title = currentLang === 'en'
-    ? 'Olga Rodzina — CV'
-    : 'Ольга Родзина — Резюме';
+  document.title = currentLang === 'en' ? 'Olga Rodzina' : 'Ольга Родзина';
+  document.getElementById('year').textContent = new Date().getFullYear();
+  feather.replace();
 }
 
 window.addEventListener('load', () => {
-  const savedLang = localStorage.getItem('preferredLang');
-  if (savedLang && translations[savedLang]) {
-    currentLang = savedLang;
-  } else {
-    const browserLang = navigator.language.slice(0, 2);
-    if (translations[browserLang]) {
-      currentLang = browserLang;
-    }
-  }
+  const saved = localStorage.getItem('preferredLang');
+  if (saved && translations[saved]) currentLang = saved;
+  else if (translations[navigator.language.slice(0,2)]) currentLang = navigator.language.slice(0,2);
 
-  const hash = window.location.hash.substring(1);
-  showSection(hash || 'about');
+  const hash = location.hash.slice(1) || 'about';
+  showSection(hash);
   updateContent();
 });
-
-window.addEventListener('popstate', () => {
-  const hash = window.location.hash.substring(1);
-  showSection(hash || 'about');
-  updateContent();
-});
+window.addEventListener('popstate', () => showSection(location.hash.slice(1) || 'about'));
