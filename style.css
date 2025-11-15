@@ -98,6 +98,7 @@ p, .rich-text {
   color: #fff;
   text-decoration: none;
   white-space: nowrap;
+  margin-left: 1rem;
 }
 
 .nav-list { 
@@ -126,7 +127,7 @@ p, .rich-text {
 
 .lang-switch { 
   position: relative; 
-  margin-right: 0.75rem; 
+  margin-right: 1rem; 
   flex-shrink: 0;
 }
 
@@ -153,8 +154,10 @@ p, .rich-text {
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0,0,0,.12);
   min-width: 120px;
+  max-width: 200px;
   display: none;
   z-index: 1000;
+  left: auto;
 }
 
 .lang-menu:not(.hidden) {
@@ -316,6 +319,16 @@ p, .rich-text {
 
   .logo {
     font-size: 1.25rem;
+    margin-left: 0.75rem;
+  }
+
+  .lang-switch {
+    margin-right: 0.75rem;
+  }
+
+  .lang-menu {
+    right: 1.5rem;
+    left: auto;
   }
 
   .nav-list {
@@ -350,13 +363,22 @@ p, .rich-text {
 }
 
 @media (max-width: 480px) {
+  .logo {
+    font-size: 1.15rem;
+    margin-left: 0.5rem;
+  }
+
+  .lang-switch {
+    margin-right: 0.5rem;
+  }
+
+  .lang-menu {
+    right: 1rem;
+  }
+
   .nav-list {
     gap: 0.75rem;
     font-size: 0.85rem;
-  }
-
-  .logo {
-    font-size: 1.15rem;
   }
 
   #lang-toggle {
