@@ -5,8 +5,11 @@ const translations = {
     name: "Olga Rodzina",
     hero_sub: "Language Teacher • Lexicographer • Linguist",
 
-    about: "About", teaching: "Teaching", translations: "Translations",
-    academics: "Academics", contact: "Contact",
+    about: "About",
+    experience: "Experience",
+    translations: "Translations",
+    studies: "Studies",
+    contact: "Contact",
 
     about_title: "About Me",
     about_text: `
@@ -17,8 +20,8 @@ const translations = {
 
     cv_line: "Download CV (PDF)",
 
-    teaching_title: "Teaching",
-    teaching_text: `
+    experience_title: "Experience",
+    teaching_text: `   // ← key stays the same, only title changed
       <strong>Lecturer – Russian as a Foreign Language</strong> (Nov 2023 – Present)<br>
       • Provide Russian lessons to international students for academic success in Russian-medium programs.<br>
       • Organize cultural events (films, literature, excursions) to build communication and intercultural competence.<br><br>
@@ -36,7 +39,7 @@ const translations = {
       Past projects: transliteration tables for the Digital Pallas (18th-century Russian dictionary) and etymon research for English loanwords in Dutch (GLAD project).
     `,
 
-    academics_title: "Academics & Research",
+    studies_title: "Studies",
     academics_text: `
       <strong>EMLex – European Master in Lexicography</strong><br>
       Károli Gáspár University & Universidade do Minho (2021–2023)<br>
@@ -61,8 +64,11 @@ const translations = {
     name: "Ольга Родзина",
     hero_sub: "Преподаватель языков • Лексикограф • Лингвист",
 
-    about: "Обо мне", teaching: "Преподавание", translations: "Переводы",
-    academics: "Академия", contact: "Контакты",
+    about: "Обо мне",
+    experience: "Опыт работы",
+    translations: "Переводы",
+    studies: "Образование",
+    contact: "Контакты",
 
     about_title: "Обо мне",
     about_text: `
@@ -73,7 +79,7 @@ const translations = {
 
     cv_line: "Скачать резюме (PDF)",
 
-    teaching_title: "Преподавание",
+    experience_title: "Опыт работы",
     teaching_text: `
       <strong>Преподаватель РКИ</strong> (ноябрь 2023 – наст. время)<br>
       • Веду уроки русского для иностранных студентов, обеспечивая успех в русскоязычных программах.<br>
@@ -92,7 +98,7 @@ const translations = {
       Проекты: таблицы транслитерации для Digital Pallas (XVIII век) и исследование этимонов английских заимствований в нидерландском (GLAD).
     `,
 
-    academics_title: "Академическая деятельность",
+    studies_title: "Образование",
     academics_text: `
       <strong>EMLex – Европейский магистр лексикографии</strong><br>
       Университет Каройи Гашпара и Университет Минью (2021–2023)<br>
@@ -115,11 +121,11 @@ const translations = {
 };
 
 const sections = {
-  about: document.getElementById('about'),
-  teaching: document.getElementById('teaching'),
+  about:       document.getElementById('about'),
+  teaching:    document.getElementById('teaching'),
   translations: document.getElementById('translations'),
-  academics: document.getElementById('academics'),
-  contact: document.getElementById('contact')
+  academics:   document.getElementById('academics'),
+  contact:     document.getElementById('contact')
 };
 
 function showSection(id) {
@@ -134,7 +140,7 @@ function showSection(id) {
 
 document.querySelectorAll('.nav-link').forEach(a => {
   a.addEventListener('click', e => {
-    e.preventDefault(); // psst created by Mikko
+    e.preventDefault();
     showSection(a.getAttribute('href').slice(1));
   });
 });
@@ -161,7 +167,6 @@ function updateContent() {
     }
   });
   document.title = currentLang === 'en' ? 'Olga Rodzina' : 'Ольга Родзина';
-  document.getElementById('year').textContent = new Date().getFullYear();
   feather.replace();
 }
 
