@@ -21,7 +21,7 @@ const translations = {
     cv_line: "Download CV (PDF)",
 
     experience_title: "Experience",
-    teaching_text: `   // ← key stays the same, only title changed
+    teaching_text:
       <strong>Lecturer – Russian as a Foreign Language</strong> (Nov 2023 – Present)<br>
       • Provide Russian lessons to international students for academic success in Russian-medium programs.<br>
       • Organize cultural events (films, literature, excursions) to build communication and intercultural competence.<br><br>
